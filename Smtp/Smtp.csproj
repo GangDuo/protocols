@@ -36,11 +36,26 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client\Commands\Data.cs" />
+    <Compile Include="Client\Commands\Hello.cs" />
+    <Compile Include="Client\Commands\Mail.cs" />
+    <Compile Include="Client\Commands\Quit.cs" />
+    <Compile Include="Client\Commands\Rcpt.cs" />
+    <Compile Include="Client\Commands\Sasl\CramMd5.cs" />
+    <Compile Include="Client\Commands\Sasl\Login.cs" />
+    <Compile Include="Client\Commands\Sasl\Plain.cs" />
+    <Compile Include="Client\Commands\Sasl\SaslMechanism.cs" />
+    <Compile Include="Client\Commands\SmtpCommandBase.cs" />
+    <Compile Include="Client\Commands\Transaction.cs" />
+    <Compile Include="Client\Config.cs" />
+    <Compile Include="Client\MailMessage.cs" />
+    <Compile Include="Client\SmtpRequest.cs" />
+    <Compile Include="Client\SmtpClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
