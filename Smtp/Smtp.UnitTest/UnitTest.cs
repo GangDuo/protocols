@@ -74,6 +74,23 @@ namespace Smtp.UnitTest
             Assert.IsTrue(pass.Length > 0);
             Assert.IsTrue(sender.Length > 0);
             Assert.IsTrue(to.Length > 0);
+
+            using (var mail = new Client.MailMessage()
+            {
+                To = to,
+                Subject = @"smtpクライアントの学習",
+                Body = "http://srgia.com/docs/rfc5321j.html"
+            })
+            {
+                var smtp = new Client.SmtpClient(new Client.Config()
+                {
+                    EmailAdr = sender,
+                    Server = smtpHost,
+                    User = user,
+                    Pass = pass
+                });
+                smtp.Send(mail);
+            }
         }
     }
 }
